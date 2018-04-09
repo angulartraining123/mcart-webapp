@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
+import { RepeatDirective } from './repeat.directive';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     HelloComponent,
     WelcomeComponent,
-    LoginComponent
+    LoginComponent,
+    RepeatDirective
   ],
   imports: [
     BrowserModule,

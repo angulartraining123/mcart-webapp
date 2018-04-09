@@ -16,6 +16,25 @@
           <div class="row" style="text-align:center">
               <button class="btn btn-primary" (click)="showLogin=true">Login</button>
           </div>
+          <div class="row" style="text-align:center">
+            <span *ngFor="let course of courses;  let i = index"> 
+                {{i+1}} - {{ course.name }} 
+            </span><h4>
+                Current choice is {{ value }}
+              </h4>
+              
+            <div [ngSwitch]="value">
+                <p *ngSwitchCase="1">First Choice</p>
+                <p *ngSwitchCase="2">Second Choice</p>
+                <p *ngSwitchCase="3">Third Choice</p>
+                <p *ngSwitchCase="2">Second Choice Again</p>
+                <p *ngSwitchDefault>Default Choice</p>
+              </div>
+              <button (click)="nextChoice()">
+                Next Choice
+        </button>
+        <p *appRepeat="5">I am being repeated...</p> 
+          </div>
       </div>
   </div>
 </div>
