@@ -6,18 +6,18 @@
               <span class="img-responsive center-block logo-styles"> 
   <span class="glyphicon glyphicon-shopping-cart"> </span>
               </span>
-              <div id="div1" class="shadow title-styles">
+              <div id="div1" [class.attr-class]="true" class="shadow title-styles">
                   mCart</div>
           </div>
           <br />
           <div class="row">
-              <div class="text-center text-styles">An online app to purchase mobile gadgets</div>
+              <div class="text-center text-styles" [style.font-size.px]="showLogin==true?22:10">An online app to purchase mobile gadgets</div>
           </div>
           <div class="row" style="text-align:center">
               <button class="btn btn-primary" (click)="showLogin=true">Login</button>
           </div>
           <div class="row" style="text-align:center">
-            <span *ngFor="let course of courses;  let i = index"> 
+            <!-- <span *ngFor="let course of courses;  let i = index"> 
                 {{i+1}} - {{ course.name }} 
             </span><h4>
                 Current choice is {{ value }}
@@ -32,9 +32,18 @@
               </div>
               <button (click)="nextChoice()">
                 Next Choice
-        </button>
-        <p *appRepeat="5">I am being repeated...</p> 
+        </button> -->
+        <!-- <p appRepeat #rd="repeat" #ct="changeText">I am being repeated...</p>  -->
+        <ng-template appRepeat #rd="repeat" #ct="changeText">
+            <p>I am being repeated...</p>
+        </ng-template>        
+        <button (click)="rd.repeatElement(5)">Repeat Element</button>
+        <button (click)="ct.changeElementText(5)">Change Text</button> 
+
           </div>
+          <h3>Attribute Directive</h3>
+            <p [appMessage]="myMessage">Click Here</p> 
+
       </div>
   </div>
 </div>

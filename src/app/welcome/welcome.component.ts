@@ -8,6 +8,7 @@ import { AngularModal } from './angular-modal';
 export class WelcomeComponent implements OnInit {
 public pageTitle: string = "Welcome";
 showLogin:any = false;
+myMessage: string = "Custom Attribute directive test";
 courses: AngularModal[] = [
   { id: 1, name: "TypeScript" },
   { id: 2, name: "Angular" },
