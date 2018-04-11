@@ -6,7 +6,7 @@ import { AngularModal } from './angular-modal';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
-public pageTitle: string = "Welcome";
+public pageTitle: string = "hi WeLcOme";
 showLogin:any = false;
 myMessage: string = "Custom Attribute directive test";
 courses: AngularModal[] = [
@@ -29,6 +29,9 @@ value: number = 0;
   }
   nextChoice() {
     this.value++;
+  }
+  doSomeLog(){
+    console.log("Logged something");
   }
 
 

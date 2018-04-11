@@ -34,7 +34,7 @@
                 Next Choice
         </button> -->
         <!-- <p appRepeat #rd="repeat" #ct="changeText">I am being repeated...</p>  -->
-        <ng-template appRepeat #rd="repeat" #ct="changeText">
+        <!-- <ng-template appRepeat #rd="repeat" #ct="changeText">
             <p>I am being repeated...</p>
         </ng-template>        
         <button (click)="rd.repeatElement(5)">Repeat Element</button>
@@ -42,8 +42,11 @@
 
           </div>
           <h3>Attribute Directive</h3>
-            <p [appMessage]="myMessage">Click Here</p> 
-
+            <p [appMessage]="myMessage">Click Here</p>  -->
+          <input [(ngModel)]="pageTitle" (click)="doSomeLog()">
+          <h3>{{pageTitle | uppercase }}</h3>
+          {{ 25000 | currency:'INR':'symbol' }} 
+          <h3>{{pageTitle | titlecase }}</h3>
       </div>
   </div>
 </div>
