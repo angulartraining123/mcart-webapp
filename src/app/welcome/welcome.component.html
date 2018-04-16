@@ -43,10 +43,48 @@
           </div>
           <h3>Attribute Directive</h3>
             <p [appMessage]="myMessage">Click Here</p>  -->
-          <input [(ngModel)]="pageTitle" (click)="doSomeLog()">
+          <!-- <input [(ngModel)]="pageTitle" (click)="doSomeLog()">
           <h3>{{pageTitle | uppercase }}</h3>
           {{ 25000 | currency:'INR':'symbol' }} 
-          <h3>{{pageTitle | titlecase }}</h3>
+          <h3>{{pageTitle | titlecase }}</h3> -->
+            Sort the list based on
+            <select [(ngModel)]="sortoption">
+                    <option value="prodName">Product Name</option>
+                    <option value="price">Price</option>        
+                </select><br/><br/>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let products of productsList | sort:sortoption">
+                        <td>{{products.productName}}</td>
+                        <td>{{products.price}}</td>
+                    </tr>
+                </tbody>
+            </table> 
+            <button (click)="show=true">View Courses list</button><br/><br/>
+<div *ngIf="show">
+    <app-courses-list></app-courses-list>
+</div> 
+<h2> Popular Courses </h2>
+
+Select a course to view
+<select #course (change)="cl.changeCourse(course.value)">
+    <option value="Node JS">Node JS</option>
+    <option value="Typescript">Typescript</option>
+    <option value="Angular">Angular</option>
+    <option value="React JS">React JS</option>
+</select>
+<br/>
+<br/>
+
+<app-courses-list list (onRegister)="courseReg($event)" #cl="courselist"></app-courses-list> 
+<div *ngIf="message">{{message}}</div> 
       </div>
   </div>
 </div>

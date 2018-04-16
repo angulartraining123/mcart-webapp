@@ -1,0 +1,44 @@
+<!-- <div *ngIf="submit" class='panel panel-primary panelpos'>
+  <div class='panel-heading'>{{ pageTitle }}</div>
+  <div class='panel-body'>
+
+      <table class='table' *ngIf='selectedProducts && selectedProducts.length' style="margin-bottom: 0px; margin-right: 0px">
+          <thead>
+              <tr class="tableheadercolor">
+                  <th class="center">Product</th>
+                  <th class="center">Quantity</th>
+                  <th class="center">Price</th>
+                  <th class="center">Total Price</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor='let product of selectedProducts; let i=index'>
+                  <td class="center">{{product.productName}}</td>
+                  <td class="center">
+                      <input type="number" id="quant" class="" [(ngModel)]=product.quantity min="1" max="100" (change)="updateCart(product)">
+                  </td>
+                  <td class="center">{{ product.price | currency:'INR':'symbol':'1.2-2' }}</td>
+                  <td class="center">{{ product.totalPrice | currency:'INR':'symbol':'1.2-2'}}</td>
+                  <td><a (click)="remove(i)"><span title="Delete"
+                              class="glyphicon glyphicon-trash"></span></a></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <th class="center">Total</th>
+                  <td class="center"><strong>{{ grandTotal | currency:'INR':'symbol':'1.2-2' }}</strong></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td></td>
+
+                  <td>
+                      <button type="button" class="btn btn-primary" (click)='onBack()'>
+                              <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                          </button>
+                  </td>
+                  <td>
+                      <button type="button" class="btn btn-primary" (click)="checkout()">
+                              Checkout <span class="glyphicon glyphicon-play"></span>
+                          </button> -->

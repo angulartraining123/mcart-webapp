@@ -9,6 +9,9 @@ import { LoginComponent } from './login/login.component';
 import { RepeatDirective } from './repeat.directive';
 import { MessageDirective } from './message.directive';
 import { ProductListComponent } from './product-list/product-list.component';
+import { SortPipe } from './sort.pipe';
+import { CartComponent } from './cart/cart.component';
+import { CoursesListComponent } from './courses-list/courses-list.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { ProductListComponent } from './product-list/product-list.component';
     LoginComponent,
     RepeatDirective,
     MessageDirective,
-    ProductListComponent
+    ProductListComponent,
+    SortPipe,
+    CartComponent,
+    CoursesListComponent
   ],
   imports: [
     BrowserModule,
