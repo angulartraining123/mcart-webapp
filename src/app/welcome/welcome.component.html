@@ -1,4 +1,4 @@
-<div *ngIf="!showLogin" class="container container-styles">
+<div *ngIf="showLogin" class="container container-styles">
   <div class="panel panel-primary">
       <div class="panel-heading">{{pageTitle}}</div>
       <div class="panel-body">
@@ -47,7 +47,9 @@
           <h3>{{pageTitle | uppercase }}</h3>
           {{ 25000 | currency:'INR':'symbol' }} 
           <h3>{{pageTitle | titlecase }}</h3> -->
-            Sort the list based on
+
+
+            <!-- Sort the list based on
             <select [(ngModel)]="sortoption">
                     <option value="prodName">Product Name</option>
                     <option value="price">Price</option>        
@@ -84,8 +86,11 @@ Select a course to view
 <br/>
 
 <app-courses-list list (onRegister)="courseReg($event)" #cl="courselist"></app-courses-list> 
-<div *ngIf="message">{{message}}</div> 
+<div *ngIf="message">{{message}}</div>  -->
       </div>
   </div>
 </div>
+</div>
 <app-login *ngIf="showLogin"></app-login>
+<!-- <app-course-form></app-course-form> -->
+<app-registration-form></app-registration-form>
