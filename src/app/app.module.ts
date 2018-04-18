@@ -14,8 +14,10 @@ import { CartComponent } from './cart/cart.component';
 import { CoursesListComponent } from './courses-list/courses-list.component';
 import { CourseFormComponent } from './course-form/course-form.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { BookComponent } from './book/book.component';
+import { BookService } from './book.service';
 
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,14 +31,16 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     CartComponent,
     CoursesListComponent,
     CourseFormComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [WelcomeComponent]
 })
 export class AppModule { }

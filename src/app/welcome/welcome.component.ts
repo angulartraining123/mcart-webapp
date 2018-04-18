@@ -33,9 +33,9 @@ sortoption: string = "";
     let object = new AngularModal(5,'React');
     this.courses.push(object);
     this.courses.forEach(result=>{
-      console.log("ID: "+result.id+" Name: "+result.name);
+      // console.log("ID: "+result.id+" Name: "+result.name);
     })
-    console.log(object.name);
+    // console.log(object.name);
   }
   nextChoice() {
     this.value++;
